@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rose Day Special</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Happy  Rose  Day</h1>
+    <div class="message-box" id="loveMessage">Love is like a rose, beautiful and timeless.</div>
+   
+        
+    
+
+    
+    <script>
+        const messages = [
+            "You are the rose of my life!🌹",
+            "Every petal of a rose symbolizes love for you.🌹",
+            "Roses are red, violets are blue, I'm blessed to have someone like you!🌹",
+            "May our love bloom like a beautiful rose!🌹"
+        ];
+        let index = 0;
+        setInterval(() => {
+            document.getElementById("loveMessage").innerText = messages[index];
+            index = (index + 1) % messages.length;
+        }, 3000);
+
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.innerHTML = "🌹";
+            heart.classList.add("hearts");
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = (Math.random() * 2 + 3) + "s";
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 5000);
+        }
+        setInterval(createHeart, 500);
+    </script>
+</body>
+</html>

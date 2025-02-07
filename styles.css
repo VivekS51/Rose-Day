@@ -1,0 +1,61 @@
+body {
+    
+    
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    background: linear-gradient(#ff3255, #fa6d95);
+    font-family:  red serif;
+    text-align: center;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 50px;
+    margin-top: 50px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.message-box {
+    font-size: 24px;
+    width: 60%;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80px; /* Ensuring fixed height */
+    transition: opacity 1s ease-in-out; /* Smooth fade effect */
+}
+
+/* Roses Animation */
+.rose {
+    position: absolute;
+    width: 80px;
+    animation: sway 3s infinite alternate ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes sway {
+    from { transform: rotate(-10deg); }
+    to { transform: rotate(10deg); }
+}
+
+/* Floating Hearts */
+.hearts {
+    position: fixed;
+    font-size: 30px;
+    animation: floatUp 5s linear infinite;
+}
+
+@keyframes floatUp {
+    from { transform: translateY(100vh) scale(1); opacity: 1; }
+    to { transform: translateY(-10vh) scale(1.5); opacity: 0; }
+}
